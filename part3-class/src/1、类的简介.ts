@@ -31,4 +31,6 @@ console.log(Person.EducationBackground);
 Person.EducationBackground = 'undergraduate';   //类属性也是可以修改的
 console.log(Person.EducationBackground);
 //访问类对象Person上的类方法
-console.log(Person.sayDaddy());
+Person.sayDaddy();
+//实例对象访问类方法
+per.constructor.sayDaddy(); //或per.constructor.sayDaddy()  //涉及原型链的知识
