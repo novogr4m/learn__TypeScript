@@ -36,12 +36,12 @@
 
     const RDR = new Game('荒野大镖客',82);
 
-    console.log(RDR.name);
-    RDR.name = '荒野小嫖客';    //当修饰符为private 且没有set方法 不能修改RDR.name
-    console.log(RDR.name);
+    console.log(RDR.name);      //荒野大镖客
+    RDR.name = '荒野小嫖客';    //如果修饰符为private 且没有set方法 不能修改RDR.name
+    console.log(RDR.name);      //荒野小嫖客
     RDR.price = 238;
     RDR.price = -22;    
-    console.log(RDR);
+    console.log(RDR);  // Game { _name: '荒野小嫖客', _price: 238 }
 
     
     //private 和 protected的区别:
@@ -58,7 +58,7 @@
     class B extends A{
         //尝试访问A中的num
         showNum(){
-            // console.log(this.num); // 报错，private只能在当前类中访问 将num改为protected修饰则可以
+            console.log(this.num); // 报错，private只能在当前类中访问 将num改为protected修饰则可以
         }
     }
     const ttt = new B(13);
@@ -76,6 +76,6 @@
     }
 
     const cTest = new C('ddd',123);
-    console.log(cTest);
+    console.log(cTest);     //C { name: 'ddd', age: 123 }
 
 })();

@@ -2,7 +2,8 @@ class Student{
 
     name:string;
     subject:string;
-    grade:number;
+    grade: number;
+    
     //constructor 被称为构造函数
     //构造函数会在对象创建时调用
     constructor(name:string,subject:string,grade:number){
@@ -20,7 +21,7 @@ class Student{
 
 const student1 = new Student('kkk','编译原理',75);
 const student2 = new Student('hf','编译原理',78);
-student1.showGrade();
-student2.showGrade();
+student1.showGrade();   //编译原理 kkk 75
+student2.showGrade();   //编译原理 hf 78
 
 
